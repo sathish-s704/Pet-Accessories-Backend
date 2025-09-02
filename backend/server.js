@@ -18,7 +18,10 @@ import { fileURLToPath } from 'url';
 const app = express();
 //middleware for parsing json request for body
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+    origin: ['https://pet-accessories-store-frontend.vercel.app', 'http://localhost:3000', 'http://localhost:5173'],
+    credentials: true
+}));
 dotenv.config();
 const port = process.env.PORT || 4000;
 const db = process.env.MONGO_URI;
