@@ -26,7 +26,8 @@ app.use(cookieParser());
 // ✅ CORS Configuration
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://pet-frontend-tau.vercel.app'
+  'https://pet-frontend-tau.vercel.app',
+  'https://pet-accessories-backend-52wp.onrender.com'
 ];
 
 app.use(
