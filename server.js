@@ -23,9 +23,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 // ✅ CORS
+// ✅ CORS Configuration
 const allowedOrigins = [
   'http://localhost:5173',
-  'pet-frontend-iota.vercel.app',
+  'https://pet-frontend-iota.vercel.app', 
 ];
 
 app.use(
@@ -39,9 +40,10 @@ app.use(
       }
     },
     credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS']
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   })
 );
+
 
 // ✅ Static uploads
 const __filename = fileURLToPath(import.meta.url);
