@@ -25,7 +25,7 @@ app.use(cookieParser());
 // ✅ CORS
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://pet-frontend-tau.vercel.app',
+  'pet-frontend-iota.vercel.app',
 ];
 
 app.use(
